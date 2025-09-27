@@ -1,0 +1,196 @@
+"","city","lat","lon","type_cycle","type_motorcycle","cycle","motorcycle","country","continent","continent_group","selected"
+"1","Ahmedabad",23.0215374,72.5800568,"demo","demo",1.6,10,"India","Asia","Asia",1.6
+"2","Amsterdam",52.3730796,4.8924534,"train","demo",42.9,4.7,"Netherlands","Europe","Europe",42.9
+"3","Antwerp",51.2211097,4.3997081,"demo","demo",24.7,2.5,"Belgium","Europe","Europe",24.7
+"4","Arica",-18.4785288,-70.3211394,"train","train",2.1,0,"Chile","South America","South America",2.1
+"5","Baltimore",39.2908816,-76.610759,"train","train",0.9,0,"US","North America","North America",0.9
+"6","Bangkok",13.7524938,100.4935089,"train","train",1,27,"Thailand","Asia","Asia",1
+"7","Barcelona",41.3828939,2.1774322,"train","train",1.8,4.9,"Spain","Europe","Europe",1.8
+"8","Belgrade",44.8178131,20.4568974,"train","train",0.8,0.3,"Servia","Europe","Europe",0.8
+"9","Belo Horizonte",-19.9227318,-43.9450948,"train","train",1,4.6,"Brazil","South America","South America",1
+"10","Bengaluru",12.98815675,77.62260004,"train","demo",1.4,18,"India","Asia","Asia",1.4
+"11","Bergamo",45.7566557,9.754219201,"train","train",4.5,9.3,"Italy","Europe","Europe",4.5
+"12","Bergen",60.3943055,5.3259192,"train","train",3,1,"Norway","Europe","Europe",3
+"13","Berlin",52.510885,13.3989367,"train","demo",9.9,2.7,"Germany","Europe","Europe",9.9
+"14","Blackpool",53.8179442,-3.0509812,"train","train",1.3,0.9,"UK","Europe","Europe",1.3
+"15","Bogota",4.6533816,-74.0836333,"train","train",6.3,4.7,"Colombia","South America","South America",6.3
+"16","Bologna",44.4938203,11.3426327,"train","train",5.2,8.9,"Italy","Europe","Europe",5.2
+"17","Bolzano",46.65594545,11.23021287,"train","train",22.2,7.7,"Italy","Europe","Europe",22.2
+"18","Bonn",50.7352621,7.1024635,"train","train",15.1,0.4,"Germany","Europe","Europe",15.1
+"19","Boston",42.3554334,-71.060511,"train","train",2.1,0.1,"US","North America","North America",2.1
+"20","Bratislava",48.1516988,17.1093063,"demo","demo",3,1,"Slovakia","Europe","Europe",3
+"21","Brussels",50.8465573,4.351697,"train","train",4.4,1.3,"Belgium","Europe","Europe",4.4
+"22","Bucharest",44.4361414,26.1027202,"train","demo",1.3,0.4,"Romania","Europe","Europe",1.3
+"23","Buffalo",42.8867166,-78.8783922,"train","train",1.1,0.1,"US","North America","North America",1.1
+"24","Cali",3.4519988,-76.5325259,"train","train",4.5,16.6,"Colombia","South America","South America",4.5
+"25","Cambridge",52.2055314,0.1186637,"train","train",21.9,0.9,"UK","Europe","Europe",21.9
+"26","Catania",37.5023612,15.0873718,"train","train",0.3,8.9,"Italy","Europe","Europe",0.3
+"27","Chiang Mai",18.7882778,98.9858802,"train","train",5.7,41.2,"Thailand","Asia","Asia",5.7
+"28","Chiayi",23.4591664,120.2930004,"demo","demo",2,46,"Taiwan","Asia","Asia",2
+"29","Cleveland",41.4996574,-81.6936772,"train","train",0.7,0.1,"US","North America","North America",0.7
+"30","Copenhagen",55.6867243,12.5700724,"demo","demo",43.4,0.8,"Denmark","Europe","Europe",43.4
+"31","Copiapo",-27.3664685,-70.3322753,"train","train",1.1,0,"Chile","South America","South America",1.1
+"33","Cordoba",37.8845813,-4.7760138,"train","train",2.7,5.9,"Argentina","South America","South America",2.7
+"35","Dallas",32.7762719,-96.7968559,"train","train",0.2,0.1,"US","North America","North America",0.2
+"36","Davao",7.0648306,125.6080623,"train","train",1.3,12.4,"Philippines","Asia","Asia",1.3
+"37","Davis",40.7474784,-92.3965311,"demo","demo",3.2,2.3,"US","Africa","Africa",3.2
+"39","Delhi",28.6273928,77.1716954,"train","demo",3.2,10.1,"India","Asia","Asia",3.2
+"41","Denver",39.7392364,-104.984862,"train","train",2.5,0.2,"US","North America","North America",2.5
+"42","Detroit",42.3315509,-83.0466403,"train","train",0.8,0,"US","North America","North America",0.8
+"43","Dublin",53.3493795,-6.2605593,"train","train",7.6,0.8,"Ireland","Europe","Europe",7.6
+"44","El Paso",31.7601164,-106.4870404,"train","train",0.2,0.2,"US","North America","North America",0.2
+"46","Eugene",44.0505054,-123.0950506,"demo","demo",3.2,3.2,"US","Africa","Africa",3.2
+"47","Ferrara",44.76676425,11.827939,"train","train",17.3,3.1,"Italy","Europe","Europe",17.3
+"48","Firenze",43.7697955,11.2556404,"train","train",6.3,18.9,"Italy","Europe","Europe",6.3
+"49","Fortaleza",-3.7304512,-38.5217989,"demo","demo",3.1,6.7,"Brazil","Africa","Africa",3.1
+"50","Frankfurt",50.1106444,8.6820917,"train","train",15.6,0.2,"Germany","Europe","Europe",15.6
+"51","Fresno",36.7394421,-119.78483,"train","train",1.1,0.3,"US","North America","North America",1.1
+"52","Genova",44.40726,8.9338624,"train","train",0.3,21.1,"Italy","Europe","Europe",0.3
+"53","Ghent",51.0538286,3.7250121,"train","train",33,0.8,"Belgium","Europe","Europe",33
+"54","Gothenburg",57.7072326,11.9670171,"train","train",4,4,"Sweden","Europe","Europe",4
+"55","Groningen",53.2190652,6.5680077,"demo","demo",28.1,1.4,"Netherlands","Europe","Europe",28.1
+"56","Guadalajara",20.6720375,-103.338396,"demo","demo",2.4,2.9,"Mexico","Africa","Africa",2.4
+"57","Hamburg",53.550341,10.000654,"train","train",14.6,0.8,"Germany","Europe","Europe",14.6
+"58","Helsinki",60.1674881,24.9427473,"train","demo",5.4,1.8,"Finland","Europe","Europe",5.4
+"59","Hong Kong",22.350627,114.1849161,"train","demo",0.8,0.2,"China","Asia","Asia",0.8
+"60","Houston",29.7589382,-95.3676974,"train","train",0.6,0.1,"US","North America","North America",0.6
+"61","Hsinchu",24.8066333,120.9686833,"demo","demo",1.2,64.6,"Taiwan","Asia","Asia",1.2
+"62","Hull",53.76238625,-0.330121376,"train","train",5.6,1.2,"UK","Europe","Europe",5.6
+"63","Ipoh",4.6471782,101.1884259,"demo","demo",2.7,12.3,"Malaysia","Asia","Asia",2.7
+"64","Ipswich",52.0579324,1.1528095,"train","train",5,1.2,"UK","Europe","Europe",5
+"65","Istanbul",41.0766019,29.052495,"train","demo",0.7,0.9,"Turkey","Europe","Europe",0.7
+"66","Jakarta",-6.175247,106.8270488,"train","train",0.5,57.9,"Indonesia","Asia","Asia",0.5
+"67","Joao Pessoa",-7.1215981,-34.882028,"demo","demo",2.9,7.2,"Brazil","Africa","Africa",2.9
+"68","Johannesburg",-26.205,28.049722,"train","demo",1.5,0.7,"South Africa","Africa","Africa",1.5
+"70","Kaohsiung",22.6203348,120.3120375,"train","train",5.4,61.3,"Taiwan","Asia","Asia",5.4
+"71","Khon Kaen",16.6022387,102.6352933,"demo","train",4.4,45.4,"Thailand","Asia","Asia",4.4
+"72","Khulna",22.9372087,89.2852741,"train","train",5.9,3.1,"Bangladesh","Asia","Asia",5.9
+"73","Kiev",50.4500336,30.5241361,"train","demo",2.9,0.2,"Ukraine","Europe","Europe",2.9
+"75","Las Vegas",36.1672559,-115.148516,"train","train",0.4,0.5,"US","North America","North America",0.4
+"76","Leon",42.5989995,-5.5682413,"demo","demo",3.4,1.7,"Mexico","Africa","Africa",3.4
+"77","Lisbon",38.7077507,-9.1365919,"demo","demo",2,4.7,"Portugal","Europe","Europe",2
+"78","Livorno",42.7902379,10.34022393,"train","train",8.9,20.1,"Italy","Europe","Europe",8.9
+"79","London",51.4893335,-0.144055085,"train","train",2.6,0.7,"UK","Europe","Europe",2.6
+"80","Los Angeles",34.0536909,-118.242766,"demo","demo",1.6,1.4,"US","Africa","Africa",1.6
+"82","Madrid",40.4167047,-3.7035825,"train","train",0.5,0.9,"Spain","Europe","Europe",0.5
+"83","Makassar",-5.1342962,119.4124282,"demo","demo",1.5,34.4,"Indonesia","Asia","Asia",1.5
+"84","Malaga",36.7213028,-4.4216366,"demo","demo",1.3,8.6,"Spain","Europe","Europe",1.3
+"85","Malmo",55.6052931,13.0001566,"demo","demo",15,0.5,"Sweden","Europe","Europe",15
+"86","Manchester",53.4794892,-2.2451148,"train","train",3.3,0.2,"UK","Europe","Europe",3.3
+"87","Medan",3.5896654,98.6738261,"demo","demo",2.3,38.6,"Indonesia","Asia","Asia",2.3
+"88","Medellin",6.26973245,-75.60255965,"train","train",1,11.9,"Colombia","South America","South America",1
+"89","Mendoza",-34.78709305,-68.43818677,"train","train",2.2,2.1,"Argentina","South America","South America",2.2
+"90","Messina",38.1937571,15.5542082,"train","train",0.4,9.4,"Italy","Europe","Europe",0.4
+"91","Mexico City",19.4326296,-99.1331785,"train","train",2.2,1.6,"Mexico","South America","South America",2.2
+"92","Milano",45.4641943,9.1896346,"train","train",4.8,4.8,"Italy","Europe","Europe",4.8
+"93","Minneapolis",44.9772995,-93.2654692,"train","train",4.5,0.2,"US","North America","North America",4.5
+"96","Montreal",45.5031824,-73.5698065,"train","demo",2.6,3.7,"Canada","North America","North America",2.6
+"97","Moscow",55.625578,37.6063916,"demo","demo",2.4,0.2,"Russia","Europe","Europe",2.4
+"98","Municipio de Salta",-24.74489465,-65.53959248,"train","train",3,5.6,"Argentina","South America","South America",3
+"99","Nakhon Ratchasima",14.9747339,102.0981161,"demo","demo",3.4,42,"Thailand","Asia","Asia",3.4
+"100","Nakuru",-0.2802724,36.0712048,"train","demo",5.5,7,"Kenya","Africa","Africa",5.5
+"101","Nantes",47.2186371,-1.5541362,"train","train",3,1,"France","Europe","Europe",3
+"102","New Orleans",29.9759983,-90.0782127,"demo","demo",3.7,4.3,"US","Africa","Africa",3.7
+"104","Odense",55.3997225,10.3852104,"demo","demo",18,2.1,"Denmark","Europe","Europe",18
+"105","Orebro",59.2747287,15.2151181,"demo","demo",18.4,0.6,"Sweden","Europe","Europe",18.4
+"106","Oslo",59.9133301,10.7389701,"train","train",6,0,"Norway","Europe","Europe",6
+"107","Osorno",42.4106725,-4.3609815,"train","train",1.5,0,"Chile","South America","South America",1.5
+"109","Padova",45.391408,11.80584868,"train","train",9.5,7.7,"Italy","Europe","Europe",9.5
+"110","Palembang",-2.9888243,104.7568507,"train","train",2.7,43.1,"Indonesia","Asia","Asia",2.7
+"111","Palermo",38.1112268,13.3524434,"train","train",1.5,13.8,"Italy","Europe","Europe",1.5
+"112","Paris",48.8588897,2.320041022,"demo","demo",9.9,14.4,"France","Europe","Europe",9.9
+"113","Paris",48.8588897,2.320041022,"train","train",9.9,2,"France","Europe","Europe",9.9
+"114","Parma",44.6952006,10.0979869,"train","train",12.3,4.7,"Italy","Europe","Europe",12.3
+"115","Pescara",42.3102619,13.95759011,"train","train",3.4,4.2,"Italy","Europe","Europe",3.4
+"116","Philadelphia",39.9527237,-75.1635262,"train","train",2.2,0.1,"US","North America","North America",2.2
+"117","Portland",45.5202471,-122.674194,"train","train",7,0.4,"US","North America","North America",7
+"118","Porto Alegre",-30.0324999,-51.2303767,"demo","demo",2.2,3.2,"Brazil","Africa","Africa",2.2
+"119","Posadas",-27.3664824,-55.894295,"train","train",2.5,7,"Argentina","South America","South America",2.5
+"120","Prague",50.0596288,14.44645927,"train","demo",1,1.1,"Czech Republic","Europe","Europe",1
+"121","Preston",53.7593363,-2.6992717,"train","train",3.1,0.8,"UK","Europe","Europe",3.1
+"122","Quito",-0.2201641,-78.5123274,"demo","demo",2.7,2.1,"Ecuador","Africa","Africa",2.7
+"123","Ravenna",44.3640607,12.05900949,"train","train",11.8,2.9,"Italy","Europe","Europe",11.8
+"124","Reading",51.4564242,-0.9700664,"train","train",3.2,0.7,"UK","Europe","Europe",3.2
+"125","Reggio nellEmilia",44.698,10.6295,"train","train",8.8,2.9,"Italy","Europe","Europe",8.8
+"126","Richmond",37.5385087,-77.43428,"train","train",2.2,0.3,"US","North America","North America",2.2
+"127","Riga",56.9493977,24.1051846,"demo","demo",4.4,1.3,"Latvia","Europe","Europe",4.4
+"128","Rimini",43.94654325,12.63074902,"train","train",12.1,9.7,"Italy","Europe","Europe",12.1
+"129","Rio de Janeiro",-22.9110137,-43.2093727,"demo","demo",3.1,3,"Brazil","Africa","Africa",3.1
+"130","Rome",41.8933203,12.4829321,"train","train",1,15.5,"Italy","Europe","Europe",1
+"131","Rosario",-32.9593609,-60.6617024,"train","train",8.4,6.3,"Argentina","South America","South America",8.4
+"132","Rotterdam",51.9244424,4.47775,"train","demo",31,0,"Netherlands","Europe","Europe",31
+"133","Saint Petersburg",59.9606739,30.1586551,"demo","demo",2.5,0.2,"Russia","Europe","Europe",2.5
+"134","Salta",-25.1076701,-64.3494964,"train","train",3,5.6,"Argentina","South America","South America",3
+"135","SaltLakeCity",40.7608,-111.891,"train","train",2.8,0.5,"US","North America","North America",2.8
+"136","Salvador",13.8000382,-88.9140683,"train","train",0.9,1.9,"Brazil","South America","South America",0.9
+"137","Salzburg",47.7981346,13.0464806,"demo","demo",11,2.1,"Austria","Europe","Europe",11
+"138","San Diego",32.7174202,-117.162772,"train","train",1,0.6,"US","North America","North America",1
+"139","San Francisco",37.7792588,-122.4193286,"train","train",4.4,1,"US","North America","North America",4.4
+"140","San Sebastian",43.3224219,-1.9838889,"train","train",4.2,4.5,"Spain","Europe","Europe",4.2
+"141","SanJose",11.9923308,75.73070472,"train","train",1,0.4,"US","North America","North America",1
+"142","Santiago Chile",-33.4377756,-70.6504502,"train","train",3.7,0.5,"Chile","South America","South America",3.7
+"143","Santiago USA",39.3698103,-80.2014723,"train","train",3.4,0.5,"US","North America","North America",3.4
+"144","Santiago_Chile",-33.4377756,-70.6504502,"train","train",3.7,0.5,"Chile","South America","South America",3.7
+"145","Sao Paulo",-23.5506507,-46.6333824,"train","train",0.6,1.8,"Brazil","South America","South America",0.6
+"146","Seattle",47.6038321,-122.330062,"train","train",4,0.5,"US","North America","North America",4
+"147","Seville",37.3886303,-5.9953403,"demo","demo",2.5,4.6,"Spain","Europe","Europe",2.5
+"148","Sofia",42.6977028,23.3217359,"train","train",1.8,0.1,"Bulgary","Europe","Europe",1.8
+"149","Stavanger",58.9699675,5.7318101,"train","train",7,1,"Norway","Europe","Europe",7
+"150","Stockholm",59.3251172,18.0710935,"train","demo",15.1,1.3,"Sweden","Europe","Europe",15.1
+"152","Surabaya",-7.2459717,112.7378266,"demo","demo",3.6,43.7,"Indonesia","Asia","Asia",3.6
+"153","Swindon",51.5615327,-1.7854322,"train","train",2.8,1.2,"UK","Europe","Europe",2.8
+"155","Tallinn",59.4372155,24.7453688,"demo","demo",2.3,0.7,"Estonia","Europe","Europe",2.3
+"156","Tampa",27.9477595,-82.458444,"train","train",1.6,0.3,"US","North America","North America",1.6
+"158","Tel Aviv",32.0852997,34.7818064,"train","train",13,6.8,"Israel","Asia","Asia",13
+"159","Temuco",-38.7358908,-72.590538,"train","train",2.4,0,"Chile","South America","South America",2.4
+"160","Teresina",-5.0874608,-42.8049571,"demo","demo",3.7,10.3,"Brazil","Africa","Africa",3.7
+"161","Tokyo",35.6768601,139.7638947,"train","train",16,2,"Japan","Asia","Asia",16
+"162","Trieste",45.6496485,13.7772781,"train","train",0.7,15.8,"Italy","Europe","Europe",0.7
+"163","Trondheim",63.4304475,10.3952118,"train","train",9,1,"Norway","Europe","Europe",9
+"164","Tucson",32.2228765,-110.974847,"train","train",3,0.5,"US","North America","North America",3
+"165","Tucuman",-26.5643582,-64.882397,"train","train",3.6,13.6,"Argentina","South America","South America",3.6
+"167","Umea",63.8256568,20.2630745,"train","train",23,2,"Sweden","Europe","Europe",23
+"168","Utrecht",52.0907006,5.1215634,"train","demo",37.8,2.1,"Netherlands","Europe","Europe",37.8
+"169","Valdivia",-39.8141262,-73.2459859,"train","train",2.5,0,"Chile","South America","South America",2.5
+"170","Valencia",39.4697065,-0.3763353,"demo","demo",3.1,10.3,"Spain","Europe","Europe",3.1
+"171","Vancouver",49.2608724,-123.113952,"train","demo",2.6,0.8,"Canada","North America","North America",2.6
+"172","Verona",45.4424977,10.98573769,"train","train",6.4,8.1,"Italy","Europe","Europe",6.4
+"173","Vilnius",54.6870458,25.2829111,"demo","demo",2.7,0.5,"Lithuania","Europe","Europe",2.7
+"174","VitoriaGasteiz",42.8467,-2.6727,"train","train",8.2,0.4,"Spain","Europe","Europe",8.2
+"175","Warsaw",52.2319581,21.0067249,"train","train",3.1,0.3,"Poland","Europe","Europe",3.1
+"176","WashingtonDC",38.9072,-77.0369,"train","train",4.5,0.2,"US","North America","North America",4.5
+"177","Wien",48.2083537,16.3725042,"demo","demo",4.4,4.1,"Austria","Europe","Europe",4.4
+"178","Zaragoza",41.6521342,-0.8809428,"demo","demo",2,5.3,"Spain","Europe","Europe",2
+"179","Zurich",47.3744489,8.5410422,"demo","demo",10.3,4.1,"Switzerland","Europe","Europe",10.3
+"180","Eldoret",0.5204,35.2698,"collated","collated",1.3,99999999,"Kenya","Africa","Africa",1.3
+"181","Embu",-0.5317,37.45,"collated","collated",0.9,99999999,"Kenya","Africa","Africa",0.9
+"182","Garissa",-0.4569,39.6583,"collated","collated",0.5,99999999,"Kenya","Africa","Africa",0.5
+"183","Kakamega",0.2845,34.7529,"collated","collated",2.4,99999999,"Kenya","Africa","Africa",2.4
+"184","Kericho",-0.3683,35.2833,"collated","collated",0.3,99999999,"Kenya","Africa","Africa",0.3
+"185","Kisumu",-0.0917,34.768,"collated","collated",3.5,99999999,"Kenya","Africa","Africa",3.5
+"186","Kitui",-1.3667,38.0167,"collated","collated",0.5,99999999,"Kenya","Africa","Africa",0.5
+"187","Machakos",-1.5167,37.2667,"collated","collated",0,99999999,"Kenya","Africa","Africa",0
+"188","Malind",-3.2167,40.1167,"collated","collated",2.3,99999999,"Kenya","Africa","Africa",2.3
+"189","Mombasa",-4.0435,39.6682,"collated","collated",0.9,99999999,"Kenya","Africa","Africa",0.9
+"190","Nairobi",-1.2921,36.8219,"collated","collated",2,99999999,"Kenya","Africa","Africa",2
+"191","Naivasha",-0.7167,36.4333,"collated","collated",3.4,99999999,"Kenya","Africa","Africa",3.4
+"192","Nakuru",-0.3031,36.08,"collated","collated",4,99999999,"Kenya","Africa","Africa",4
+"193","Nyeri",-0.4167,36.95,"collated","collated",1.1,99999999,"Kenya","Africa","Africa",1.1
+"194"," Thika",-1.0333,37.0693,"collated","collated",4.5,99999999,"Kenya","Africa","Africa",4.5
+"195","Rangpur",25.75,89.25,"collated","collated",9,12,"Bangladesh","Asia","Asia",9
+"196","Chiang Mai",18.7883,98.9853,"collated","collated",5.7,41.2,"Thailand","Asia","Asia",5.7
+"198","Cebu",10.3157,123.8854,"collated","collated",1.2,14.5,"Philippines","Asia","Asia",1.2
+"199","Davao",7.1907,125.4553,"collated","collated",1.3,12.4,"Philippines","Asia","Asia",1.3
+"202","Jakarta",-6.2088,106.8456,"collated","collated",0.5,57.9,"Indonesia","Asia","Asia",0.5
+"204","Bekasi",-6.2349,106.9896,"collated","collated",0,37.5,"Indonesia","Asia","Asia",0
+"206","Depok",-6.4025,106.7942,"collated","collated",0,37.5,"Indonesia","Asia","Asia",0
+"207","Tangerang",-6.1783,106.6319,"collated","collated",0,37.5,"Indonesia","Asia","Asia",0
+"208","Palembang",-2.9909,104.7566,"collated","collated",2.7,47.7,"Indonesia","Asia","Asia",2.7
+"210","Manado",1.4748,124.8421,"collated","collated",1.2,12.9,"Indonesia","Asia","Asia",1.2
+"211","Kuala Lumpur",3.139,101.6869,"collated","collated",0.9,37,"Malaysia","Asia","Asia",0.9
+"212","Kaohsiung",22.6273,120.3014,"collated","collated",5.4,99999999,"Taiwan","Asia","Asia",5.4
+"213","Sejong",36.48,127.289,"collated","collated",3.2,99999999,"South Korea","Asia","Asia",3.2
+"214","Riyadh",24.7136,46.6753,"collated","collated",1,99999999,"Saudi Arabia","Africa","Africa",1
+"215","Jerusalem",31.7683,35.2137,"collated","collated",19,99999999,"Israel","Asia","Asia",19
+"216","Singapore",1.3521,103.8198,"collated","collated",1,99999999,"Singapore","Asia","Asia",1
+"217","Taipei",25.033,121.5654,"collated","collated",4,99999999,"Taiwan","Asia","Asia",4

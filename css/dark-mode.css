@@ -1,0 +1,48 @@
+[data-theme="dark"] {
+    --light-bg: #121212;
+    --dark-bg: #1e1e1e;
+    --card-bg: #2d2d2d;
+    --text-color: #e9ecef;
+    --border-color: #495057;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .table {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .loading-spinner {
+    background: rgba(18, 18, 18, 0.9);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #495057;
+}
+
+[data-theme="dark"] .stat-card small {
+    color: #adb5bd;
+}
