@@ -37,13 +37,19 @@
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav ms-auto">
+                    <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#predictorModal">
+                        <i class="fas fa-calculator me-1 d-none d-md-inline"></i>Predictor
+                    </button>
                     <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#comparisonModal">
                         <i class="fas fa-balance-scale me-1 d-none d-md-inline"></i>Compare
+                    </button>
+                    <button class="btn btn-outline-light me-2" id="exportData">
+                        <i class="fas fa-download me-1 d-none d-md-inline"></i>Export
                     </button>
                     <button class="btn btn-outline-light me-2" id="themeToggle">
                         <i class="fas fa-moon"></i>
                     </button>
-                    <a href="https://github.com/kapil2020/cycling-dashboard" class="btn btn-outline-light" target="_blank">
+                    <a href="https://github.com/yourusername/cycling-dashboard" class="btn btn-outline-light" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -57,12 +63,24 @@
             <!-- Sidebar Filters -->
             <div class="col-lg-3 col-md-4 mb-3">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-gradient">
+                    <div class="card-header bg-gradient d-flex justify-content-between align-items-center">
                         <h5 class="card-title mb-0">
                             <i class="fas fa-filter me-2"></i>Filters
                         </h5>
+                        <span class="badge bg-light text-dark" id="activeFilterCount">0</span>
                     </div>
                     <div class="card-body">
+                        <!-- Range Sliders -->
+                        <div class="mb-3">
+                            <label class="form-label">Cycling Range: <span id="cycleRangeValue">0-100%</span></label>
+                            <div id="cycleRangeSlider" class="range-slider"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Motorcycle Range: <span id="motorcycleRangeValue">0-100%</span></label>
+                            <div id="motorcycleRangeSlider" class="range-slider"></div>
+                        </div>
+
                         <!-- Continent Filter -->
                         <div class="mb-3">
                             <label class="form-label">Continent</label>
@@ -105,10 +123,42 @@
                             </div>
                         </div>
 
-                        <!-- Reset Filters -->
-                        <button class="btn btn-outline-secondary w-100" id="resetFilters">
-                            <i class="fas fa-refresh me-2"></i>Reset Filters
-                        </button>
+                        <!-- Advanced Options -->
+                        <div class="accordion" id="advancedOptions">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advancedCollapse">
+                                        <i class="fas fa-cogs me-2"></i>Advanced Options
+                                    </button>
+                                </h2>
+                                <div id="advancedCollapse" class="accordion-collapse collapse" data-bs-parent="#advancedOptions">
+                                    <div class="accordion-body">
+                                        <div class="form-check form-switch mb-2">
+                                            <input class="form-check-input" type="checkbox" id="showOutliers" checked>
+                                            <label class="form-check-label" for="showOutliers">Show Outliers</label>
+                                        </div>
+                                        <div class="form-check form-switch mb-2">
+                                            <input class="form-check-input" type="checkbox" id="animateCharts" checked>
+                                            <label class="form-check-label" for="animateCharts">Animate Charts</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="autoRefresh" checked>
+                                            <label class="form-check-label" for="autoRefresh">Auto Refresh</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="d-grid gap-2 mt-3">
+                            <button class="btn btn-outline-secondary" id="resetFilters">
+                                <i class="fas fa-refresh me-2"></i>Reset Filters
+                            </button>
+                            <button class="btn btn-success" id="saveSession">
+                                <i class="fas fa-save me-2"></i>Save Session
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -148,6 +198,31 @@
                                     <h4 id="avgMotorcycle">0%</h4>
                                     <small>Avg Motorcycle</small>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trend Indicators -->
+                <div class="card shadow-sm mt-3">
+                    <div class="card-header bg-gradient">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-chart-line me-2"></i>Trend Indicators
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="trend-indicator">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Cycling vs Global Avg</span>
+                                <span id="cycleTrend" class="badge bg-success">+0%</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Motorcycle vs Global Avg</span>
+                                <span id="motorcycleTrend" class="badge bg-danger">+0%</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Mode Balance</span>
+                                <span id="balanceIndicator" class="badge bg-info">Balanced</span>
                             </div>
                         </div>
                     </div>
@@ -220,10 +295,18 @@
                 <div class="row mb-3">
                     <div class="col-lg-6 mb-3">
                         <div class="card shadow-sm h-100">
-                            <div class="card-header bg-gradient">
+                            <div class="card-header bg-gradient d-flex justify-content-between align-items-center">
                                 <h5 class="card-title mb-0">
                                     <i class="fas fa-map-marked-alt me-2"></i>Geographical Distribution
                                 </h5>
+                                <div class="chart-controls">
+                                    <button class="btn btn-sm btn-outline-secondary" id="mapZoomIn">
+                                        <i class="fas fa-search-plus"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary" id="mapZoomOut">
+                                        <i class="fas fa-search-minus"></i>
+                                    </button>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <div id="worldMap" class="chart-container"></div>
@@ -272,14 +355,45 @@
                     </div>
                 </div>
 
+                <!-- Advanced Charts Row -->
+                <div class="row mb-3">
+                    <div class="col-lg-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-gradient">
+                                <h5 class="card-title mb-0">
+                                    <i class="fas fa-wave-square me-2"></i>Distribution Analysis
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div id="distributionChart" class="chart-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-gradient">
+                                <h5 class="card-title mb-0">
+                                    <i class="fas fa-chess-board me-2"></i>Cluster Analysis
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div id="clusterChart" class="chart-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Data Table -->
                 <div class="card shadow-sm">
                     <div class="card-header bg-gradient d-flex justify-content-between align-items-center flex-column flex-md-row">
                         <h5 class="card-title mb-2 mb-md-0">
                             <i class="fas fa-table me-2"></i>Detailed Data
                         </h5>
-                        <div class="w-100 w-md-auto">
+                        <div class="d-flex gap-2 w-100 w-md-auto">
                             <input type="text" class="form-control form-control-sm" id="searchTable" placeholder="Search cities...">
+                            <button class="btn btn-sm btn-outline-primary" id="sortTable">
+                                <i class="fas fa-sort me-1"></i>Sort
+                            </button>
                         </div>
                     </div>
                     <div class="card-body">
@@ -287,19 +401,30 @@
                             <table class="table table-hover" id="dataTable">
                                 <thead>
                                     <tr>
-                                        <th>City</th>
-                                        <th class="d-none d-md-table-cell">Country</th>
-                                        <th class="d-none d-lg-table-cell">Continent</th>
-                                        <th>Data Type</th>
-                                        <th>Cycling (%)</th>
-                                        <th>Motorcycle (%)</th>
-                                        <th class="d-none d-sm-table-cell">Ratio</th>
+                                        <th>City <i class="fas fa-sort ms-1"></i></th>
+                                        <th class="d-none d-md-table-cell">Country <i class="fas fa-sort ms-1"></i></th>
+                                        <th class="d-none d-lg-table-cell">Continent <i class="fas fa-sort ms-1"></i></th>
+                                        <th>Data Type <i class="fas fa-sort ms-1"></i></th>
+                                        <th>Cycling (%) <i class="fas fa-sort ms-1"></i></th>
+                                        <th>Motorcycle (%) <i class="fas fa-sort ms-1"></i></th>
+                                        <th class="d-none d-sm-table-cell">Ratio <i class="fas fa-sort ms-1"></i></th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody id="tableBody">
                                     <!-- Data will be populated by JavaScript -->
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="text-muted">
+                                Showing <span id="currentCount">0</span> of <span id="totalCount">0</span> cities
+                            </div>
+                            <nav>
+                                <ul class="pagination pagination-sm mb-0" id="pagination">
+                                    <!-- Pagination will be generated here -->
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
@@ -349,10 +474,68 @@
         </div>
     </div>
 
+    <!-- Predictor Modal -->
+    <div class="modal fade" id="predictorModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mode Share Predictor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Continent</label>
+                            <select class="form-select" id="predictorContinent">
+                                <option value="">Select Continent</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Current Cycling %</label>
+                            <input type="number" class="form-control" id="predictorCycle" min="0" max="100" step="0.1" placeholder="Enter cycling percentage">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100" id="calculatePrediction">
+                                <i class="fas fa-calculator me-2"></i>Calculate Prediction
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <h6>Predicted Motorcycle Share</h6>
+                                    <h3 id="predictionResult" class="text-primary">-</h3>
+                                    <small class="text-muted" id="predictionConfidence"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Loading Spinner -->
     <div id="loadingSpinner" class="loading-spinner">
         <div class="spinner-border text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert">
+            <div class="toast-header">
+                <i class="fas fa-info-circle text-primary me-2"></i>
+                <strong class="me-auto">Dashboard</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">
+                Welcome to the enhanced dashboard!
+            </div>
         </div>
     </div>
 
@@ -362,5 +545,6 @@
     <script src="js/theme.js"></script>
     <script src="js/app.js"></script>
     <script src="js/charts.js"></script>
+    <script src="js/advanced.js"></script>
 </body>
 </html>
