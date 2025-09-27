@@ -65,21 +65,34 @@ A modern, interactive dashboard for visualizing and predicting cycling and motor
 ## 🏗️ Project Structure
 
 cycling-dashboard/
-├── index.html                # Main HTML file
-├── css/
-│   ├── style.css            # Light theme styles
-│   └── dark-mode.css        # Dark theme styles
-├── js/
-│   ├── theme.js             # Theme toggle logic
-│   ├── app.js               # Core dashboard logic
-│   ├── charts.js            # Plotly chart management
-│   └── advanced.js          # Predictor and comparison logic
-├── data/
-│   └── filtered_data_2025-09-27.csv  # Sample dataset
-├── assets/
-│   └── icons/               # Optional icon assets
-└── README.md                # Project documentation
+    ├── index.html # Main HTML file
+    ├── css/
+    │ ├── style.css # Light theme styles
+    │ └── dark-mode.css # Dark theme styles
+    ├── js/
+    │ ├── theme.js # Theme toggle logic
+    │ ├── app.js # Core dashboard logic (data load + filters)
+    │ ├── charts.js # Plotly chart management (ChartManager)
+    │ └── advanced.js # Predictor and comparison logic (optional)
+    ├── data/
+    │ └── filtered_data_2025-09-27.csv # Sample dataset
+    ├── assets/
+    │ └── icons/ # Optional icon assets
+    └── README.md # This file
+    
+---
+### Clone the repository
+git clone https://github.com/kapil2020/cycling-dashboard.git
 
+### Navigate to project directory
+cd cycling-dashboard
+
+### Open in browser (no build process required)
+open index.html
+
+### Or use local server for better performance
+python -m http.server 8000
+Then visit http://localhost:8000
 
 
 
@@ -88,9 +101,9 @@ cycling-dashboard/
 ## 📊 Data Source
 
 ### Primary Dataset
-The dashboard utilizes comprehensive cycling and motorcycle mode share data collected from cities worldwide through computer vision analysis of street-level imagery.
+The dashboard utilizes comprehensive cycling and motorcycle mode share data collected from cities worldwide through computer vision analysis of street-level imagery from a research article which is cited in data reference.
 
-### Research Reference
+### Research/ Data Reference
 ```bibtex
 @misc{kyriaki2025vehicledetectiongsvimagery,
     title={Vehicle detection from GSV imagery: Predicting travel behaviour for cycling and motorcycling using Computer Vision}, 
@@ -104,15 +117,3 @@ The dashboard utilizes comprehensive cycling and motorcycle mode share data coll
 ```
 
 
-# Clone the repository
-git clone https://github.com/kapil2020/cycling-dashboard.git
-
-# Navigate to project directory
-cd cycling-dashboard
-
-# Open in browser (no build process required)
-open index.html
-
-# Or use local server for better performance
-python -m http.server 8000
-# Then visit http://localhost:8000
