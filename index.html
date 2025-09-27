@@ -27,28 +27,35 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <i class="fas fa-bicycle me-2"></i>
-                Global Mode Share Dashboard
+                <span class="d-none d-sm-inline">Global Mode Share Dashboard</span>
+                <span class="d-inline d-sm-none">Mode Share</span>
             </a>
             
-            <div class="d-flex align-items-center">
-                <!-- Theme Toggle -->
-                <button class="btn btn-outline-light me-2" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <!-- GitHub Link -->
-                <a href="https://github.com/kapil2020/cycling-dashboard" class="btn btn-outline-light" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#comparisonModal">
+                        <i class="fas fa-balance-scale me-1 d-none d-md-inline"></i>Compare
+                    </button>
+                    <button class="btn btn-outline-light me-2" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="https://github.com/yourusername/cycling-dashboard" class="btn btn-outline-light" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Main Container -->
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-3">
         <div class="row">
             <!-- Sidebar Filters -->
-            <div class="col-lg-3 col-md-4">
+            <div class="col-lg-3 col-md-4 mb-3">
                 <div class="card shadow-sm">
                     <div class="card-header bg-gradient">
                         <h5 class="card-title mb-0">
@@ -77,7 +84,7 @@
                             <label class="form-label">Data Type</label>
                             <select class="form-select" id="dataTypeFilter">
                                 <option value="all">All Data Types</option>
-                                <option value="train">Training Data</option>
+                                <option value="train" selected>Training Data</option>
                                 <option value="demo">Demo Data</option>
                                 <option value="collated">Collated Data</option>
                             </select>
@@ -87,13 +94,13 @@
                         <div class="mb-3">
                             <label class="form-label">Display Mode</label>
                             <div class="btn-group w-100" role="group">
-                                <input type="radio" class="btn-check" name="modeFilter" id="cycleMode" autocomplete="off" checked>
+                                <input type="radio" class="btn-check" name="modeFilter" id="cycleMode" autocomplete="off">
                                 <label class="btn btn-outline-primary" for="cycleMode">Cycling</label>
                                 
                                 <input type="radio" class="btn-check" name="modeFilter" id="motorcycleMode" autocomplete="off">
                                 <label class="btn btn-outline-primary" for="motorcycleMode">Motorcycle</label>
                                 
-                                <input type="radio" class="btn-check" name="modeFilter" id="bothModes" autocomplete="off">
+                                <input type="radio" class="btn-check" name="modeFilter" id="bothModes" autocomplete="off" checked>
                                 <label class="btn btn-outline-primary" for="bothModes">Both</label>
                             </div>
                         </div>
@@ -150,14 +157,14 @@
             <!-- Main Content -->
             <div class="col-lg-9 col-md-8">
                 <!-- KPI Cards -->
-                <div class="row mb-4">
-                    <div class="col-xl-3 col-md-6">
+                <div class="row mb-3">
+                    <div class="col-xl-3 col-md-6 mb-3">
                         <div class="card kpi-card bg-primary text-white">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
                                         <h6 class="card-title">Top Cycling City</h6>
-                                        <h3 id="topCycleCity">-</h3>
+                                        <h5 id="topCycleCity">-</h5>
                                         <span id="topCycleValue">0%</span>
                                     </div>
                                     <i class="fas fa-trophy fa-2x opacity-50"></i>
@@ -165,13 +172,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-3 col-md-6 mb-3">
                         <div class="card kpi-card bg-success text-white">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
                                         <h6 class="card-title">Top Motorcycle City</h6>
-                                        <h3 id="topMotorcycleCity">-</h3>
+                                        <h5 id="topMotorcycleCity">-</h5>
                                         <span id="topMotorcycleValue">0%</span>
                                     </div>
                                     <i class="fas fa-motorcycle fa-2x opacity-50"></i>
@@ -179,13 +186,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-3 col-md-6 mb-3">
                         <div class="card kpi-card bg-info text-white">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
                                         <h6 class="card-title">Data Coverage</h6>
-                                        <h3 id="dataCoverage">0</h3>
+                                        <h5 id="dataCoverage">0</h5>
                                         <span>Cities with Data</span>
                                     </div>
                                     <i class="fas fa-database fa-2x opacity-50"></i>
@@ -193,13 +200,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-3 col-md-6 mb-3">
                         <div class="card kpi-card bg-warning text-white">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
                                         <h6 class="card-title">Highest Ratio</h6>
-                                        <h3 id="highestRatioCity">-</h3>
+                                        <h5 id="highestRatioCity">-</h5>
                                         <span id="highestRatio">0:1</span>
                                     </div>
                                     <i class="fas fa-balance-scale fa-2x opacity-50"></i>
@@ -210,8 +217,8 @@
                 </div>
 
                 <!-- Charts Row 1 -->
-                <div class="row mb-4">
-                    <div class="col-lg-6">
+                <div class="row mb-3">
+                    <div class="col-lg-6 mb-3">
                         <div class="card shadow-sm h-100">
                             <div class="card-header bg-gradient">
                                 <h5 class="card-title mb-0">
@@ -223,7 +230,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 mb-3">
                         <div class="card shadow-sm h-100">
                             <div class="card-header bg-gradient">
                                 <h5 class="card-title mb-0">
@@ -238,8 +245,8 @@
                 </div>
 
                 <!-- Charts Row 2 -->
-                <div class="row mb-4">
-                    <div class="col-lg-8">
+                <div class="row mb-3">
+                    <div class="col-lg-8 mb-3">
                         <div class="card shadow-sm h-100">
                             <div class="card-header bg-gradient">
                                 <h5 class="card-title mb-0">
@@ -251,7 +258,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3">
                         <div class="card shadow-sm h-100">
                             <div class="card-header bg-gradient">
                                 <h5 class="card-title mb-0">
@@ -267,11 +274,11 @@
 
                 <!-- Data Table -->
                 <div class="card shadow-sm">
-                    <div class="card-header bg-gradient d-flex justify-content-between align-items-center">
-                        <h5 class="card-title mb-0">
+                    <div class="card-header bg-gradient d-flex justify-content-between align-items-center flex-column flex-md-row">
+                        <h5 class="card-title mb-2 mb-md-0">
                             <i class="fas fa-table me-2"></i>Detailed Data
                         </h5>
-                        <div>
+                        <div class="w-100 w-md-auto">
                             <input type="text" class="form-control form-control-sm" id="searchTable" placeholder="Search cities...">
                         </div>
                     </div>
@@ -281,18 +288,60 @@
                                 <thead>
                                     <tr>
                                         <th>City</th>
-                                        <th>Country</th>
-                                        <th>Continent</th>
+                                        <th class="d-none d-md-table-cell">Country</th>
+                                        <th class="d-none d-lg-table-cell">Continent</th>
                                         <th>Data Type</th>
                                         <th>Cycling (%)</th>
                                         <th>Motorcycle (%)</th>
-                                        <th>Ratio</th>
+                                        <th class="d-none d-sm-table-cell">Ratio</th>
                                     </tr>
                                 </thead>
                                 <tbody id="tableBody">
                                     <!-- Data will be populated by JavaScript -->
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- City Comparison Modal -->
+    <div class="modal fade" id="comparisonModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Compare Cities</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-2 mb-md-0">
+                            <select class="form-select" id="city1Select">
+                                <option value="">Select City 1</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-select" id="city2Select">
+                                <option value="">Select City 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="comparisonResults" class="row text-center">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="card comparison-card h-100">
+                                <div class="card-body" id="city1Data">
+                                    <p class="text-muted">Select a city to compare</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card comparison-card h-100">
+                                <div class="card-body" id="city2Data">
+                                    <p class="text-muted">Select a city to compare</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
