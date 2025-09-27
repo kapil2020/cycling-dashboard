@@ -23,6 +23,13 @@ class ThemeManager {
         
         localStorage.setItem('theme', theme);
         this.currentTheme = theme;
+        
+        // Update chart themes if they exist
+        if (window.dashboard && window.dashboard.chartManager) {
+            setTimeout(() => {
+                window.dashboard.chartManager.updateCharts();
+            }, 100);
+        }
     }
 
     toggleTheme() {
