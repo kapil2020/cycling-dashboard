@@ -44,43 +44,6 @@ body {
     border-radius: 12px 12px 0 0 !important;
 }
 
-/* Range Slider Styles */
-.range-slider {
-    height: 5px;
-    background: #ddd;
-    border-radius: 5px;
-    margin: 15px 0;
-    position: relative;
-}
-
-.range-slider .range-track {
-    height: 100%;
-    background: var(--primary-color);
-    border-radius: 5px;
-    position: absolute;
-}
-
-.range-slider .range-thumb {
-    width: 20px;
-    height: 20px;
-    background: white;
-    border: 2px solid var(--primary-color);
-    border-radius: 50%;
-    position: absolute;
-    top: -7.5px;
-    cursor: grab;
-    transition: all 0.2s ease;
-}
-
-.range-slider .range-thumb:hover {
-    transform: scale(1.1);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.range-slider .range-thumb:active {
-    cursor: grabbing;
-}
-
 /* KPI Cards */
 .kpi-card {
     border-radius: 12px;
@@ -124,17 +87,6 @@ body {
     }
 }
 
-/* Chart Controls */
-.chart-controls {
-    display: flex;
-    gap: 5px;
-}
-
-.chart-controls .btn {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.8rem;
-}
-
 /* Stat Cards */
 .stat-card {
     padding: 10px;
@@ -152,15 +104,6 @@ body {
 
 .stat-card small {
     color: #6c757d;
-    font-size: 0.8rem;
-}
-
-/* Trend Indicators */
-.trend-indicator {
-    font-size: 0.9rem;
-}
-
-.trend-indicator .badge {
     font-size: 0.8rem;
 }
 
@@ -196,35 +139,6 @@ body {
     vertical-align: middle;
 }
 
-.table th {
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-}
-
-.table th:hover {
-    background-color: rgba(0,0,0,0.05);
-}
-
-.table th i {
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-}
-
-.table th:hover i {
-    opacity: 1;
-}
-
-/* Pagination */
-.pagination {
-    margin-bottom: 0;
-}
-
-.pagination .page-link {
-    border-radius: 6px;
-    margin: 0 2px;
-}
-
 /* Button Styles */
 .btn {
     border-radius: 8px;
@@ -250,16 +164,6 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(67, 97, 238, 0.25);
 }
 
-/* Accordion */
-.accordion-button {
-    border-radius: 8px !important;
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: rgba(67, 97, 238, 0.1);
-    color: var(--primary-color);
-}
-
 /* Navigation */
 .navbar-brand {
     font-weight: 700;
@@ -269,12 +173,6 @@ body {
 .navbar-toggler {
     border: none;
     padding: 0.25rem 0.5rem;
-}
-
-/* Toast Styles */
-.toast {
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Responsive Design */
@@ -293,10 +191,6 @@ body {
     
     .card-header h5 {
         font-size: 1.1rem;
-    }
-    
-    .chart-controls {
-        margin-top: 10px;
     }
 }
 
@@ -320,11 +214,6 @@ body {
     
     .stat-card h4 {
         font-size: 1.2rem;
-    }
-    
-    .table th, .table td {
-        padding: 0.5rem;
-        font-size: 0.85rem;
     }
 }
 
@@ -352,18 +241,9 @@ body {
     animation: fadeIn 0.5s ease-in;
 }
 
-.slide-in {
-    animation: slideIn 0.3s ease-out;
-}
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideIn {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
 }
 
 /* Badge Styles */
@@ -408,12 +288,6 @@ body {
     .table-responsive {
         font-size: 0.85rem;
     }
-    
-    .range-slider .range-thumb {
-        width: 16px;
-        height: 16px;
-        top: -5.5px;
-    }
 }
 
 /* Print styles */
@@ -425,26 +299,4 @@ body {
     .card {
         break-inside: avoid;
     }
-}
-
-/* Utility Classes */
-.text-gradient {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.shadow-lg {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
-}
-
-/* Custom animations for charts */
-.chart-container {
-    transition: all 0.3s ease;
-}
-
-.chart-container.loading {
-    opacity: 0.7;
-    pointer-events: none;
 }
