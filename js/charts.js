@@ -12,24 +12,70 @@ class ChartManager {
     }
 
     createWorldMap() {
-        const data = [{
-            type: 'scattergeo',
-            mode: 'markers',
-            locations: this.dashboard.filteredData.map(row => row.country),
-            locationmode: 'country names',
-            text: this.dashboard.filteredData.map(row => 
-                `${row.city}<br>Cycling: ${row.cycle}%<br>Motorcycle: ${row.motorcycle}%`
-            ),
-            marker: {
-                size: this.dashboard.filteredData.map(row => Math.sqrt(row.cycle + row.motorcycle) * 2),
-                color: this.dashboard.filteredData.map(row => row.cycle),
-                colorscale: 'Viridis',
-                colorbar: {
-                    title: 'Cycling %'
-                }
+    // Filter out extreme outliers for better visualization
+    const displayData = this.dashboard.filteredData.filter(row => 
+        row.motorcycle <= 100 && row.cycle <= 100
+    );
+
+    const data = [{
+        type: 'scattergeo',
+        mode: 'markers',
+        locations: displayData.map(row => row.country),
+        locationmode: 'country names',
+        text: displayData.map(row => 
+            `${row.city}, ${row.country}<br>🚲 Cycling: ${row.cycle.toFixed(1)}%<br>🏍️ Motorcycle: ${row.motorcycle.toFixed(1)}%<br>📊 Data Type: ${row.type_cycle}`
+        ),
+        marker: {
+            size: displayData.map(row => {
+                const total = row.cycle + row.motorcycle;
+                return Math.min(Math.sqrt(total) * 3, 20); // Cap size at 20
+            }),
+            color: displayData.map(row => row.cycle),
+            colorscale: 'Viridis',
+            cmin: 0,
+            cmax: 50, // Cap color scale at 50% for better contrast
+            colorbar: {
+                title: 'Cycling %',
+                thickness: 10
             },
-            hoverinfo: 'text'
-        }];
+            line: {
+                color: 'rgba(0,0,0,0.3)',
+                width: 1
+            }
+        },
+        hoverinfo: 'text',
+        hoverlabel: {
+            bgcolor: 'white',
+            font: { color: 'black' }
+        }
+    }];
+
+    const layout = {
+        title: {
+            text: 'Global Mode Share Distribution',
+            font: { size: 16 }
+        },
+        geo: {
+            projection: { type: 'natural earth' },
+            showland: true,
+            landcolor: 'rgb(217, 217, 217)',
+            showcountries: true,
+            countrycolor: 'rgb(255, 255, 255)',
+            showocean: true,
+            oceancolor: 'rgb(212, 236, 255)',
+            countrywidth: 0.5
+        },
+        margin: { t: 50, r: 0, b: 0, l: 0 },
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)'
+    };
+
+    Plotly.newPlot('worldMap', data, layout, { 
+        responsive: true,
+        displayModeBar: true,
+        displaylogo: false
+    });
+}
 
         const layout = {
             title: 'Global Mode Share Distribution',
