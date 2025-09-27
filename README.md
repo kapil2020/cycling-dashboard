@@ -39,27 +39,6 @@ This dashboard is designed for simple hosting on **GitHub Pages**.
 3. Enable **GitHub Pages** in repository settings  
 4. Your site will be available at:  
 
-  
----
-
-## 📊 Data Source
-
-The dashboard uses cycling and motorcycle mode share data from cities worldwide, including:
-- **Training Data** – Used for prediction models  
-- **Demo Data** – Example predictions for demonstration cities  
-- **Collated Data** – Aggregated from multiple global sources  
-
-**Reference:**  
-```bibtex
-@misc{kyriaki2025vehicledetectiongsvimagery,
-      title={Vehicle detection from GSV imagery: Predicting travel behaviour for cycling and motorcycling using Computer Vision}, 
-      author={Kyriaki and Kokka and Rahul Goel and Ali Abbas and Kerry A. Nice and Luca Martial and SM Labib and Rihuan Ke and Carola Bibiane Schönlieb and James Woodcock},
-      year={2025},
-      eprint={2508.12794},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2508.12794}, 
-}
 🛠️ Technology Stack
 
 Frontend: HTML5, CSS3, JavaScript (ES6+)
@@ -157,4 +136,21 @@ cycling-dashboard/
 
 ---
 
-Would you like me to also add **GitHub badges** (License, Stars, Last Commit, Pages Build) at the very top for extra polish?
+  
+---
+
+## 📊 Data Source
+
+The dashboard uses cycling and motorcycle mode share data from cities worldwide, including:
+**Reference:**  
+```bibtex
+@misc{kyriaki2025vehicledetectiongsvimagery,
+      title={Vehicle detection from GSV imagery: Predicting travel behaviour for cycling and motorcycling using Computer Vision}, 
+      author={Kyriaki and Kokka and Rahul Goel and Ali Abbas and Kerry A. Nice and Luca Martial and SM Labib and Rihuan Ke and Carola Bibiane Schönlieb and James Woodcock},
+      year={2025},
+      eprint={2508.12794},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.12794}, 
+}
+
